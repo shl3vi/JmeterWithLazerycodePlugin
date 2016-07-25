@@ -1,15 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>alon.weiss</groupId>
   <artifactId>test1</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-
   <name>test1</name>
   <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <com.google.code.gson>2.3.1</com.google.code.gson>
@@ -23,7 +19,6 @@
     <kg.apc.cmdrunner>1.0.2</kg.apc.cmdrunner>
     <jmx.script.name>member_build</jmx.script.name>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -32,7 +27,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
     <plugins>
       <plugin>
@@ -43,14 +37,14 @@
           <suppressJMeterOutput>false</suppressJMeterOutput>
           <!-- ignoreResultFailures>true</ignoreResultFailures -->
           <!--<jmeterPlugins>-->
-            <!--<plugin>-->
-              <!--<groupId>kg.apc</groupId>-->
-              <!--<artifactId>jmeter-plugins-standard</artifactId>-->
-            <!--</plugin>-->
-            <!--<plugin>-->
-              <!--<groupId>kg.apc</groupId>-->
-              <!--<artifactId>jmeter-plugins-extras-libs</artifactId>-->
-            <!--</plugin>-->
+          <!--<plugin>-->
+          <!--<groupId>kg.apc</groupId>-->
+          <!--<artifactId>jmeter-plugins-standard</artifactId>-->
+          <!--</plugin>-->
+          <!--<plugin>-->
+          <!--<groupId>kg.apc</groupId>-->
+          <!--<artifactId>jmeter-plugins-extras-libs</artifactId>-->
+          <!--</plugin>-->
           <!--</jmeterPlugins>-->
         </configuration>
         <executions>
@@ -109,13 +103,22 @@
               <testFilesIncluded>
                 <jMeterTestFile>${jmx.script.name}.jmx</jMeterTestFile>
               </testFilesIncluded>
-
-
               <jMeterProcessJVMSettings>
                 <arguments>
-				  <argument>-Dsl.config.file=C:\Work\Tools\apache-jmeter-2.13\apache-jmeter-2.13\bin\sealights.json</argument>
-				  <argument>-Dsl.environmentName=${myenv.name}</argument>
-                  <argument>-javaagent:C:\Temp\sealights-java-1.3.160\artifacts\sl-test-listener-1.3.160.jar</argument>
+                  <argument>-Dsl.log.enabled=true</argument>
+                  <argument>-Dsl.log.level=INFO</argument>
+                  <argument>-Dsl.log.toConsole=true</argument>
+                  <argument>-Dsl.pathToMetaJson=&quot;C:\Users\shahar\AppData\Local\Temp\MavenExample_512eaa30-f448-45e7-b86c-cefabcc47b5a.json&quot;</argument>
+                  <argument>-Dsl.includes=&quot;*edu.lmu.*&quot;</argument>
+                  <argument>-Dsl.branchName=&quot;origin/master&quot;</argument>
+                  <argument>-Dsl.buildName=&quot;76&quot;</argument>
+                  <argument>-Dsl.environmentName=&quot;Performance&quot;</argument>
+                  <argument>-Dsl.moduleName=&quot;MavenExample&quot;</argument>
+                  <argument>-Dsl.appName=&quot;MavenExample&quot;</argument>
+                  <argument>-Dsl.proxy=&quot;http://127.0.0.1:8888&quot;</argument>
+                  <argument>-Dsl.server=&quot;http://52.50.240.57:8080/api&quot;</argument>
+                  <argument>-Dsl.customerId=&quot;mod&quot;</argument>
+                  <argument>-javaagent:C:\Users\shahar\workspace\sealights\SL.OnPremise.Agents.Java\java-agent-bootstrapper\target\java-agent-bootstrapper-1.0.0-SNAPSHOT.jar</argument>
                 </arguments>
               </jMeterProcessJVMSettings>
             </configuration>
