@@ -92,25 +92,6 @@
               <testFilesIncluded>
                 <jMeterTestFile>${jmx.script.name}.jmx</jMeterTestFile>
               </testFilesIncluded>
-              <jMeterProcessJVMSettings>
-                <arguments>
-                  <argument>-Dsl.log.enabled=true</argument>
-                  <argument>-Dsl.log.level=INFO</argument>
-                  <argument>-Dsl.log.toConsole=true</argument>
-                  <!--<argument>-Dsl.pathToMetaJson=&quot;D:\tmp\kuku1\b.json&quot;</argument>-->
-                  <argument>-Dsl.pathToMetaJson=${sl.pathToMetaJson}</argument>
-                  <argument>-Dsl.includes=*edu.lmu.*</argument>
-                  <argument>-Dsl.branchName=origin/master</argument>
-                  <argument>-Dsl.buildName=${sl.buildName}</argument>
-                  <argument>-Dsl.environmentName=Performance</argument>
-                  <argument>-Dsl.moduleName=MavenExample</argument>
-                  <argument>-Dsl.appName=MavenExample</argument>
-                  <!--<argument>-Dsl.proxy=http://127.0.0.1:8888</argument>-->
-                  <argument>-Dsl.server=http://52.209.172.200:8080/api</argument>
-                  <argument>-Dsl.customerId=mod</argument>
-                  <argument>-javaagent:/tmp/artifacts/sl-test-listener-1.7.255.jar</argument>
-                </arguments>
-              </jMeterProcessJVMSettings>
             </configuration>
           </execution>
         </executions>
@@ -213,25 +194,6 @@
               <testFilesIncluded>
                 <jMeterTestFile>${jmx.script.name}.jmx</jMeterTestFile>
               </testFilesIncluded>
-              <jMeterProcessJVMSettings>
-                <arguments>
-                  <argument>-Dsl.log.enabled=true</argument>
-                  <argument>-Dsl.log.level=INFO</argument>
-                  <argument>-Dsl.log.toConsole=true</argument>
-                  <!--<argument>-Dsl.pathToMetaJson=&quot;D:\tmp\kuku1\b.json&quot;</argument>-->
-                  <argument>-Dsl.pathToMetaJson=${sl.pathToMetaJson}</argument>
-                  <argument>-Dsl.includes=*edu.lmu.*</argument>
-                  <argument>-Dsl.branchName=origin/master</argument>
-                  <argument>-Dsl.buildName=${sl.buildName}</argument>
-                  <argument>-Dsl.environmentName=Performance</argument>
-                  <argument>-Dsl.moduleName=MavenExample</argument>
-                  <argument>-Dsl.appName=MavenExample</argument>
-                  <!--<argument>-Dsl.proxy=http://127.0.0.1:8888</argument>-->
-                  <argument>-Dsl.server=http://52.209.172.200:8080/api</argument>
-                  <argument>-Dsl.customerId=mod</argument>
-                  <argument>-javaagent:/tmp/artifacts/sl-test-listener-1.7.255.jar</argument>
-                </arguments>
-              </jMeterProcessJVMSettings>
             </configuration>
           </execution>
         </executions>
